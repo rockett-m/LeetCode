@@ -6,9 +6,7 @@ class Solution:
         
         li = [-1, -1]
         for i, j in enumerate(nums):
-            # print(i, j)
             if target > j:
                 li = [i, j]
-        print(li)
 
         return li[0] + 1
