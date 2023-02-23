@@ -27,11 +27,11 @@ class Solution:
             elif len(nums) < len(lets):
                 self.reduce_list(lets, new_s)
                 
-            elif len(nums) == len(lets):
-                if len(new_s) == 0:
+            else:
+                if (len(new_s) == 0) or (new_s[x-1].isdigit()):
                     self.reduce_list(lets, new_s)
-                elif new_s[x-1].isdigit(): # not zero, check prev type
-                    self.reduce_list(lets, new_s)
+                # elif new_s[x-1].isdigit(): # not zero, check prev type
+                #     self.reduce_list(lets, new_s)
                 else:
                     self.reduce_list(nums, new_s)
 
