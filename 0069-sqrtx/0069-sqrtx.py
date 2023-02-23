@@ -1,20 +1,20 @@
 class Solution:
     def mySqrt(self, x: int) -> int:    
 
-        my_list = [-1, -1]
+        my_ans = -1
 
         for num in range(2**31):
             ans = num * num
 
             if ans > x:
-                return my_list[0]
+                return my_ans
 
             elif ans == x:
                 return num
 
-            my_list = [num]
+            my_ans = num
 
-        return my_list[0]
+        return my_ans
     
 #     0110 -> 0010
 #     4 -> 2
