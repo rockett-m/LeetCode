@@ -5,11 +5,13 @@ class Solution:
 
         for num in range(2**31):
             ans = num * num
-            if ans == x:
-                return num
-            elif ans > x:
+
+            if ans > x:
                 return my_list[0]
-            
+
+            elif ans == x:
+                return num
+
             my_list = [num]
 
         return my_list[0]
