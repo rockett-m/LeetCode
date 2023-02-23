@@ -1,12 +1,13 @@
 class Solution:
     def thousandSeparator(self, n: int) -> str:
+
         word = str(n)
-        temp = ''
-        if len(word) < 4:
+        if len(str(n)) < 4:
             return word
-        else:
-            for i in range(len(word)):
-                temp = temp + str(word[i])
-                if (((len(word) - i) % 3) == 1) and ((len(word)-i) > 3):
-                    temp=temp+'.'
-        return temp
+
+        temp = []
+        for i in range(len(word)):
+            temp.append(word[i])
+            if (((len(word) - i) % 3) == 1) and ((len(word)-i) > 3):
+                temp.append('.')
+        return ''.join(temp)
