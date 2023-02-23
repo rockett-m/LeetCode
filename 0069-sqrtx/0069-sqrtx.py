@@ -7,11 +7,11 @@ class Solution:
             ans = num * num
             if ans < x:
                 my_list = [num]
-            elif ans == x:
-                return num
             elif ans > x:
                 return my_list[0]
-
+            elif ans == x:
+                return num
+            
         return my_list[0]
     
 #     0110 -> 0010
