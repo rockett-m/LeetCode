@@ -7,8 +7,8 @@ class Solution:
         
         if (len(s) < 1) or (abs(num_count - let_count) > 1):
             return ''
-        elif len(s) == 1:
-            return s
+        # elif len(s) == 1:
+        #     return s
 
         nums = []; lets = []
         
