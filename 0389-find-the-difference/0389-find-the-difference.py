@@ -4,7 +4,6 @@ class Solution:
         my_list = list(t)
         for i in range(len(s)):
             if s[i] in my_list:
-                idx = my_list.index(s[i])
-                my_list.pop(idx)                
+                my_list.pop(my_list.index(s[i]))                
         
         return my_list[0]
