@@ -5,5 +5,6 @@ class Solution:
         for i in range(len(s)):
             if s[i] in my_list:
                 my_list.pop(my_list.index(s[i]))                
-        
+            else:
+                return s[i]
         return my_list[0]
