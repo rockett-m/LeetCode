@@ -1,11 +1,15 @@
 class Solution:
     def hammingWeight(self, n: int) -> int:
         bin_n = str(bin(n))[2:]
-        count = 0
-        for i in range(len(bin_n)):
-            if int(bin_n[i]) == 1:
-                count += 1
-        return count
+        # count = 0
+        # for i in range(len(bin_n)):
+        #     if int(bin_n[i]) == 1:
+        #         count += 1
+        # return count
+    
+        # print(sum([int(bin_n[i]) == 1 for i in range(len(bin_n))]))
+        return sum([int(bin_n[i]) == 1 for i in range(len(bin_n))])
+    
             # print(i, bin_n[i])
 #         print(bin(n))
 #         count = 0
