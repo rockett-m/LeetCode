@@ -9,7 +9,7 @@ class Solution:
             
             if winner not in my_dict.keys():
                 my_dict[winner] = [1,0]
-            elif winner in my_dict.keys():
+            else:
                 val = my_dict[winner]
                 val[0] += 1
                 my_dict.update({winner:val})        
@@ -17,7 +17,7 @@ class Solution:
             if loser not in my_dict.keys():
                 my_dict[loser] = [0,1]
             
-            elif loser in my_dict.keys():
+            else:
                 val = my_dict[loser]
                 val[1] += 1
                 my_dict.update({loser:val})
