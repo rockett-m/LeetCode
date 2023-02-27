@@ -1,0 +1,26 @@
+class Solution:
+    def canSeePersonsCount(self, heights: List[int]) -> List[int]:
+        output = []
+        
+        for idx, person in enumerate(heights):
+            
+            if (idx == len(heights) - 1): # rightmost; end
+                output.append(0)
+                return output
+
+            right_max = 0; count = 0
+            for person2 in heights[idx+1:]: # we don't want to compare to self or left neighbors
+
+                if person <= person2: # can't see above next person; end
+                    output.append(count+1)
+                    break
+
+                # taller than right neighbor and neighbor taller than prev max
+                elif (person > person2) and (person2 > right_max): 
+                    count += 1
+                    right_max = person2
+
+            if (len(output) == idx):
+                output.append(count)
+
+        return output
