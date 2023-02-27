@@ -13,7 +13,7 @@ class Solution:
                 val = my_dict[winner]
                 val[0] += 1
                 my_dict.update({winner:val})        
-                
+
             if loser not in my_dict.keys():
                 my_dict[loser] = [0,1]
             
@@ -33,4 +33,5 @@ class Solution:
 
         zero.sort()
         one.sort()
+
         return [zero] + [one]
