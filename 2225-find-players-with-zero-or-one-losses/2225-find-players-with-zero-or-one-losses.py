@@ -22,8 +22,6 @@ class Solution:
                 val[1] += 1
                 my_dict.update({loser:val})
         
-        
-        out = []
         zero = []
         one = []
         
@@ -36,7 +34,3 @@ class Solution:
         zero.sort()
         one.sort()
         return [zero] + [one]
-        # out.append(zero)
-        # out.append(one)
-        # return out
-        
