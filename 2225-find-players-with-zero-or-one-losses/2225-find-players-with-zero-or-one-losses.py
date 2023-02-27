@@ -22,8 +22,7 @@ class Solution:
                 val[1] += 1
                 my_dict.update({loser:val})
         
-        zero = []
-        one = []
+        zero = []; one = []
         
         for k,v in my_dict.items():
             if v[1] == 1:
@@ -31,7 +30,4 @@ class Solution:
             elif v[1] == 0:
                 zero.append(int(k))
 
-        zero.sort()
-        one.sort()
-
-        return [zero] + [one]
+        return [sorted(zero), sorted(one)]
