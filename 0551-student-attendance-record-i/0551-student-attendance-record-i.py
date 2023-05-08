@@ -7,6 +7,7 @@ class Solution:
         late_count = 0
         prev = ''
         for idx, let in enumerate(s):
+            prev = let
 
             if let == 'L':
                 late_count += 1
@@ -15,5 +16,4 @@ class Solution:
             if late_count >= 3:
                 return False
 
-            prev = let
         return True
