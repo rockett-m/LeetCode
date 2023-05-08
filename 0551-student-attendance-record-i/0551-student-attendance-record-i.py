@@ -5,9 +5,9 @@ class Solution:
             return False
 
         late_count = 0
-        prev = ''
+        # prev = ''
         for idx, let in enumerate(s):
-            prev = let
+            # prev = let
 
             if let == 'L':
                 late_count += 1
