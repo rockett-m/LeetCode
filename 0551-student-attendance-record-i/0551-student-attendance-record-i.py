@@ -8,8 +8,7 @@ class Solution:
         prev = ''
         for idx, let in enumerate(s):
             print(idx, let)
-            if prev == '':
-                prev = let
+
             if let == 'L':
                 late_count += 1
             elif let != 'L':
