@@ -5,8 +5,6 @@ class Solution:
             if n % i == 0:
                 my_li.append(i)
         
-        print(my_li)
-        if len(my_li) < k:
-            return -1
+        if len(my_li) < k: return -1
         
         return my_li[k-1]
