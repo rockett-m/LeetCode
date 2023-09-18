@@ -6,10 +6,9 @@ class Solution:
         test = list(s1)
         for i, let in enumerate(s1):
             j = i+2
-            if j < len(s1):
-                if test[i] != s2[i] or test[j] != s2[j]:
-                    test[i] = s1[j]
-                    test[j] = s1[i]
-                    if ''.join(test) == s2:
-                        return True
+            if j < len(s1) and (test[i] != s2[i] or test[j] != s2[j]):
+                test[i] = s1[j]
+                test[j] = s1[i]
+                if ''.join(test) == s2:
+                    return True
         return False
