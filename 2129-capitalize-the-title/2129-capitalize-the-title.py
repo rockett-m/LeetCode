@@ -6,7 +6,7 @@ class Solution:
             if len(field) < 3:
                 out.append(field.lower())
             else:
-                res = field[0].upper() + field[1:].lower()
-                out.append(res)
+                # res = field[0].upper() + field[1:].lower()
+                out.append(field.title())
 
         return ' '.join(out)
