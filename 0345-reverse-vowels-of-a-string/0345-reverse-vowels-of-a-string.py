@@ -5,7 +5,6 @@ class Solution:
         for i in range(len(s)):
             if s[i] in ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']:
                 vowels.append(s[i])
-        # vowels = vowels[::-1] # reverse
         for i in range(len(s)):
             if s[i] in ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']:
                 out += vowels.pop(-1)
