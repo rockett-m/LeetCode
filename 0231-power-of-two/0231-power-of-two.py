@@ -1,19 +1,10 @@
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        # n = abs(n)
-        curr = 0
-        odd = False
         for i in range(32):
-            if i % 2 == 1:
-                odd = True
-            else:
-                odd = False
-            
             curr = 2**i
-            print(f'{curr = }')
             if curr == n:
                 return True
-            if curr == abs(n) and odd:
+            if curr == abs(n) and i % 2 == 1:
                 return False
             elif curr > abs(n):
                 return False
