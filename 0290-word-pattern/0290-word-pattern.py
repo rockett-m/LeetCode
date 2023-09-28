@@ -1,10 +1,7 @@
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
-        z = ''.join([x[0] for x in s.split(' ')])
-        # if len(pattern) == 1:
-        #     return True
+
         s_words = list(s.split(' '))
-        print(s_words)
         if len(pattern) != len(s_words):
             return False
 
@@ -28,5 +25,4 @@ class Solution:
             else:
                 compa.append(my_s_dict[lett])
         
-        print(comp, compa)
         return True if comp == compa else False
