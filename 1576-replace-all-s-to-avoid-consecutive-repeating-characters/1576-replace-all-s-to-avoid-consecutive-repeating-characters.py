@@ -5,23 +5,25 @@ class Solution:
         s = list(s)
 
         for idx, curr in enumerate(s):
-            if idx == len(s) - 1:
-                if curr == '?':
-                    for let in lets:
-                        if let != s[idx-1]:
-                            s[idx] = let
-                            break
-                return ''.join(s)
-            
-            elif curr == '?':
+
+            if curr == '?':
                 # insert letter that doesn't match prev or curr
                 for let in lets:
-                    if idx != 0:
-                        if let != s[idx-1] and let != s[idx+1]:
+                    if idx == len(s) - 1:
+                        if let != s[idx-1]:
                             s[idx] = let
-                            break
-                    else:
+                            return ''.join(s)
+
+#                             break
+#                         return ''.join(s)
+                    elif idx == 0:
                         if let != s[idx+1]:
                             s[idx] = let
                             break
+                    elif idx != 0:
+                        if let != s[idx-1] and let != s[idx+1]:
+                            s[idx] = let
+                            break
+
    
+        return ''.join(s)
