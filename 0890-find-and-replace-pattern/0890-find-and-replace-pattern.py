@@ -10,7 +10,6 @@ class Solution:
             match.append(my_dict[let])
         
         options = []
-        
         for w in words:
             numbers = []
             my_d = OrderedDict()
