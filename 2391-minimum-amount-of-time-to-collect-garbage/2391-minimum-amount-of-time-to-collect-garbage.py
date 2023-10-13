@@ -7,8 +7,7 @@ class Solution:
             for idx, val in enumerate(reversed(garbage)):
                 c = Counter(val)
                 if typ in c.keys():
-                    house_time = c[typ]
-                    total += house_time
+                    total += c[typ] # house_time
                     if not found:
                         final_house = len(garbage) - 1 - idx
                         found = True
