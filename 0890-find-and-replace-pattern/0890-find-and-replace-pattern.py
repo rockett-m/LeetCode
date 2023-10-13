@@ -1,10 +1,6 @@
 class Solution:
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
-        p = Counter(pattern)
-        s = set(pattern)
-        print(s)
-        assn = 1
-        
+        assn = 1        
         match = []
         my_dict = OrderedDict()
         for let in pattern:
@@ -12,8 +8,6 @@ class Solution:
                 my_dict[let] = assn
                 assn += 1
             match.append(my_dict[let])
-        
-        print(f'{match = }')
         
         options = []
         
