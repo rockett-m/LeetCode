@@ -1,13 +1,11 @@
 class Solution:
     def areNumbersAscending(self, s: str) -> bool:
-        nums = []
+        prev = -1
         for t in s.split(' '):
             if t.isnumeric():
-                if len(nums) == 0:
-                    nums.append(int(t))
+                if int(t) > prev:
+                    prev = int(t)
                 else:
-                    if nums[-1] < int(t):
-                        nums.append(int(t))
-                    else:
-                        return False
+                    return False
+
         return True
