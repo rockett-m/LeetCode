@@ -1,8 +1,6 @@
 class Solution:
     def greatestLetter(self, s: str) -> str:
-        both = []
-        lowers = set()
-        uppers = set()
+        lowers, uppers = set(), set()
         my_dict = OrderedDict()
         for i in s:
             if i.lower() == i:
