@@ -22,8 +22,10 @@ class Solution:
                 if kreq in wc.keys():
                     if vreq > wc[kreq]:
                         bad = True
+                        break
                 else:
                     bad = True # bad etc
+                    break
 
             if not bad:        
                 if minn < 0 or len(w) < minn:
