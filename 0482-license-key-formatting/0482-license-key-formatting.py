@@ -1,7 +1,6 @@
 class Solution:
     def licenseKeyFormatting(self, s: str, k: int) -> str:
-        sp = s.split('-')
-        re = ''.join(sp)[::-1]
+        re = ''.join(s.split('-'))[::-1]
         rest = []
         for i in range(0, len(re), k):
             rest.append(re[i:i+k][::-1])
