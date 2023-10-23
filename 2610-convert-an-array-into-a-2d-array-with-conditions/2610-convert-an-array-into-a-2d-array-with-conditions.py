@@ -2,9 +2,7 @@ class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
         nums = sorted(nums)
         c = Counter(nums)
-
-        out = []
-        curr = []
+        out = []; curr = []
         
         while True:
             curr = []
