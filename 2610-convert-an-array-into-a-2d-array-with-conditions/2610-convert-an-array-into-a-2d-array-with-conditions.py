@@ -1,9 +1,8 @@
 class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
-        nums = sorted(nums)
-        c = Counter(nums)
-        out = []; curr = []
-        
+        c = Counter(sorted(nums))
+        out = []
+
         while True:
             curr = []
             for k,v in c.items():
