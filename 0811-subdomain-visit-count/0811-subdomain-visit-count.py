@@ -14,6 +14,5 @@ class Solution:
 
         out = []
         for k,v in my_dict.items():
-            item = f'{v} {k}'
-            out.append(item)
+            out.append(f'{v} {k}')
         return out
