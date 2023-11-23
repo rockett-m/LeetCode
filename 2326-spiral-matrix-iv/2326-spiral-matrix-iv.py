@@ -4,15 +4,14 @@
 #         self.val = val
 #         self.next = next
 
-global row, col, rmin, cmin, rmax, cmax
-global r, d, l, u
+global row, col, rmin, cmin, rmax, cmax, r, d, l, u
+
 
 class Solution:
     def spiralMatrix(self, m: int, n: int, head: Optional[ListNode]) -> List[List[int]]:
         out = [[-1]*n for _ in range(m)]
 
-        global row, col, rmin, cmin, rmax, cmax
-        global r, d, l, u
+        global row, col, rmin, cmin, rmax, cmax, r, d, l, u
 
         row, col = 0, 0
         rmin, cmin, rmax, cmax = 0, 0, m-1, n-1
@@ -33,8 +32,7 @@ class Solution:
         return out
     
     def findNext(self):
-        global row, col, rmin, cmin, rmax, cmax
-        global r, d, l, u
+        global row, col, rmin, cmin, rmax, cmax, r, d, l, u
 
         if row == rmin and r: # top row, go right
             if col < cmax: col += 1 # go right
