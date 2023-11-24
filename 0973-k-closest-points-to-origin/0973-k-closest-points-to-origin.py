@@ -15,9 +15,7 @@ class Solution:
         
         count = 0
         for key in sorted(my_dists.keys()):
-            val = my_dists[key]
-            print(key, val)
-            for v in val:
+            for v in my_dists[key]:
                 out.append(v)
                 count += 1
                 if count == k:
