@@ -26,10 +26,12 @@ class Solution:
                 if sum(trip) == 0:
                     if trip not in output:
                         output.append(trip)
-
+                    lp += 1
+                    rp -= 1
                 # how do you decide which to increment/decrement?
-                # see how the sum compares 
-                if sum(trip) <= 0:
+                # see how the sum compares (nums are sorted remember)
+                # can't edit both pointers at once or could skip combos
+                elif sum(trip) <= 0:
                     lp += 1
                 else:
                     rp -= 1
