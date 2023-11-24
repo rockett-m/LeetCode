@@ -29,8 +29,7 @@ class Solution:
 
                 # how do you decide which to increment/decrement?
                 # see how the sum compares 
-                
-                if sum(trip) < 0:
+                if sum(trip) <= 0:
                     lp += 1
                 else:
                     rp -= 1
