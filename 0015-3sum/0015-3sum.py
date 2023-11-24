@@ -31,7 +31,7 @@ class Solution:
                 # how do you decide which to increment/decrement?
                 # see how the sum compares (nums are sorted remember)
                 # can't edit both pointers at once or could skip combos
-                elif sum(trip) <= 0:
+                elif sum(trip) < 0:
                     lp += 1
                 else:
                     rp -= 1
