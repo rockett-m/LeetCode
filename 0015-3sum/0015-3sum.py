@@ -17,6 +17,7 @@ class Solution:
                     # change both pointers because we need unique triplets
                     lp += 1
                     rp -= 1
+
                 elif sum(trip) < 0:
                     lp += 1
                 else:
