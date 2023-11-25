@@ -1,21 +1,20 @@
 class Solution:
     def numSplits(self, s: str) -> int:
-        num = 0
+        total = 0
         lset = set()
-        right = Counter(s)
+        rcounts = Counter(s)
         for idx, val in enumerate(s):
             
             if idx == 0:
                 lset.add(val)
-                right[val] -= 1
-                if right[val] == 0:
-                    del right[val]
+                rcounts[val] -= 1
+                if rcounts[val] == 0: del rcounts[val]
                 continue
 
-            if len(lset) == len(right.keys()):
-                num += 1
+            if len(lset) == len(rcounts.keys()): total += 1
+                
             lset.add(val)
-            right[val] -= 1
-            if right[val] == 0:
-                del right[val]
-        return num
+            rcounts[val] -= 1
+            if rcounts[val] == 0: del rcounts[val]
+
+        return total
