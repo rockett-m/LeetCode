@@ -8,7 +8,7 @@ class Solution:
             if prev == val:
                 result.append(result[idx-1])
             else:
-                result.append( val*idx - below + above - val*(len(nums)-1-idx) )
+                result.append(val*idx - below + above - val*(len(nums)-1-idx))
             below += val
             prev = val
         return result
