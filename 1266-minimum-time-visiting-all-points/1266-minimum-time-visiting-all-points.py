@@ -5,9 +5,8 @@ class Solution:
             if idx == 0:
                 continue
 
-            prev = points[idx-1]
-            xdelta = abs(point[0] - prev[0])
-            ydelta = abs(point[1] - prev[1])
+            xdelta = abs(point[0] - points[idx-1][0])
+            ydelta = abs(point[1] - points[idx-1][1])
 
             if xdelta > 0 and ydelta == 0: # horz is fastest and only way
                 time += xdelta
