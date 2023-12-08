@@ -17,9 +17,7 @@ class Solution:
             if node.right:
                 out += f"({solve(node.right)})"
 
-            print(out)
             return out
 
-        print(solve(root))
         return solve(root)
         
