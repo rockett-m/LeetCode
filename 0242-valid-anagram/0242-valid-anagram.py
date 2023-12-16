@@ -1,6 +1,5 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        marker = True
         a = Counter(sorted(list(s)))
         b = Counter(sorted(list(t)))
         if len(a.values()) != len(b.values()): return False
@@ -8,6 +7,5 @@ class Solution:
             if k == key and v == val:
                 continue
             else:
-                marker = False
-                # print(k,v,key,val)
-        return marker
+                return False
+        return True
