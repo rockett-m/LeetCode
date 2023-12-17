@@ -8,8 +8,6 @@ class MinStack:
 
     def pop(self) -> None:
         if self.stack:
-            print(f'{self.stack = }')
-            # self.stack.pop(len(self.stack)-1)
             self.stack.pop(-1)
 
     def top(self) -> int:
