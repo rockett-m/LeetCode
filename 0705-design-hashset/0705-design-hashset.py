@@ -1,17 +1,17 @@
 class MyHashSet:
 
     def __init__(self):
-        self.hash = set()
+        self.hs = OrderedDict()
 
     def add(self, key: int) -> None:
-        self.hash.add(key)
+        self.hs[key] = ''
 
     def remove(self, key: int) -> None:
-        if key in self.hash:
-            self.hash.remove(key)
+        if key in self.hs.keys():
+            del self.hs[key]
 
     def contains(self, key: int) -> bool:
-        return True if key in self.hash else False
+        return True if key in self.hs.keys() else False
 
 
 # Your MyHashSet object will be instantiated and called as such:
