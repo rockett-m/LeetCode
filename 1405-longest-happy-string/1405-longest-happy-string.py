@@ -40,11 +40,5 @@ class Solution:
                 occ -= amt
 
                 push_back(letters, -occ, let)
-            # ans == '' then drain up to 2 of biggest let
-            # len(ans) == 1: drain up to 2 of biggest let
-            # len(ans) >= 2: drain up to 2 of biggest let
-            
-            print(occ, let, tmp, ans)
-
         
         return ans
