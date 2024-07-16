@@ -13,7 +13,6 @@ class ATM:
         
         self.balance = sum([i*j for i, j in \
                             zip(self.atm_bill_denoms, self.atm_bill_counts)])
-        print(self.balance)
 
     def withdraw(self, amount: int) -> List[int]:
         if amount == 0: return bills
