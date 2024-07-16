@@ -9,10 +9,8 @@ class ATM:
         if sum(banknotesCount) == 0: return
         
         for denom, dep_count in enumerate(banknotesCount):
+            self.balance += self.atm_bill_denoms[denom] * dep_count
             self.atm_bill_counts[denom] += dep_count
-        
-        self.balance = sum([i*j for i, j in \
-                            zip(self.atm_bill_denoms, self.atm_bill_counts)])
 
     def withdraw(self, amount: int) -> List[int]:
         if amount == 0: return bills
@@ -23,14 +21,13 @@ class ATM:
         
         withdraw_bills = [0,0,0,0,0]
 
-        for idx in range(len(withdraw_bills)):
-            rev_idx = len(withdraw_bills) - 1 - idx
+        for rev_idx in range(len(withdraw_bills)-1, -1, -1):
 
             denomination = self.atm_bill_denoms[rev_idx]
             if denomination > amount: continue
 
-            num_bills_wanted = amount // denomination
-            num_bills_withdrawn = min(num_bills_wanted, self.atm_bill_counts[rev_idx])
+            num_bills_withdrawn = min(amount // denomination, \
+                                      self.atm_bill_counts[rev_idx])
             self.atm_bill_counts[rev_idx] -= num_bills_withdrawn
 
             amount -= num_bills_withdrawn * denomination
