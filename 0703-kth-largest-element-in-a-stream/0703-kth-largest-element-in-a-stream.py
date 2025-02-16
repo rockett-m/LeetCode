@@ -13,8 +13,8 @@ class KthLargest:
             heapq.heappush(self.nums, val)
         # only update if kth score is smaller than val
         elif val > self.nums[0]:
-            heapq.heappop(self.nums)
-            heapq.heappush(self.nums, val)
+            # heapq.heappop(self.nums)
+            heapq.heapreplace(self.nums, val)
 
         return self.nums[0]
 
