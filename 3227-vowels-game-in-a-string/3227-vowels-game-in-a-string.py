@@ -8,19 +8,6 @@ class Solution:
 
         return False if c == 0 else True
 
-        # count = 0
-        # vowels = ['a', 'e', 'i', 'o', 'u']
-        # c = Counter(s)
-
-        # count = sum([c[v] for v in vowels])       
-        # # c = s.count('a')
-        # # print(c)
-        # # for idx, val in enumerate(s):
-        # #     if val in vowels:
-        # #         count += 1
-
-        # return False if count == 0 else True
-
         # Alice can't move
         # if count == 0: return False
         # leaves Bob no letters left - delete entire string
