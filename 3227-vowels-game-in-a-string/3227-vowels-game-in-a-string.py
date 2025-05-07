@@ -5,8 +5,7 @@ class Solution:
                         s.count('e') + \
                         s.count('i') + \
                         s.count('o') + \
-                        s.count('u') == 0 \
-        else True
+                        s.count('u') == 0 else True
 
         # Alice can't move
         # if count == 0: return False
