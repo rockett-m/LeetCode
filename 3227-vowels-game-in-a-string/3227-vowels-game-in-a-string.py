@@ -1,17 +1,25 @@
 class Solution:
     def doesAliceWin(self, s: str) -> bool:
-        count = 0
-        vowels = ['a', 'e', 'i', 'o', 'u']
-        c = Counter(s)
+        c = s.count('a') + \
+            s.count('e') + \
+            s.count('i') + \
+            s.count('o') + \
+            s.count('u')
 
-        count = sum([c[v] for v in vowels])       
-        # c = s.count('a')
-        # print(c)
-        # for idx, val in enumerate(s):
-        #     if val in vowels:
-        #         count += 1
+        return False if c == 0 else True
 
-        return False if count == 0 else True
+        # count = 0
+        # vowels = ['a', 'e', 'i', 'o', 'u']
+        # c = Counter(s)
+
+        # count = sum([c[v] for v in vowels])       
+        # # c = s.count('a')
+        # # print(c)
+        # # for idx, val in enumerate(s):
+        # #     if val in vowels:
+        # #         count += 1
+
+        # return False if count == 0 else True
 
         # Alice can't move
         # if count == 0: return False
