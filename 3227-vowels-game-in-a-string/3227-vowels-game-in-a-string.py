@@ -1,12 +1,12 @@
 class Solution:
     def doesAliceWin(self, s: str) -> bool:
-        c = s.count('a') + \
-            s.count('e') + \
-            s.count('i') + \
-            s.count('o') + \
-            s.count('u')
 
-        return False if c == 0 else True
+        return False if s.count('a') + \
+                        s.count('e') + \
+                        s.count('i') + \
+                        s.count('o') + \
+                        s.count('u') == 0 \
+        else True
 
         # Alice can't move
         # if count == 0: return False
