@@ -2,10 +2,14 @@ class Solution:
     def doesAliceWin(self, s: str) -> bool:
         count = 0
         vowels = ['a', 'e', 'i', 'o', 'u']
+        c = Counter(s)
 
-        for idx, val in enumerate(s):
-            if val in vowels:
-                count += 1
+        count = sum([c[v] for v in vowels])       
+        # c = s.count('a')
+        # print(c)
+        # for idx, val in enumerate(s):
+        #     if val in vowels:
+        #         count += 1
 
         return False if count == 0 else True
 
