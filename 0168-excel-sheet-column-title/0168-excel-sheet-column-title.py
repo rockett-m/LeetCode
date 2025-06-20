@@ -9,12 +9,10 @@ class Solution:
             columnNumber //= 26
 
         # final conversion
-        ans = ""
         if columnNumber % 26 == 0:
-            ans = chr(26 + 64)
+            letters.insert(0, chr(26 + 64))
         else:
-            ans = chr((columnNumber % 26) + 64)
-        letters.insert(0, ans)
+            letters.insert(0, chr((columnNumber % 26) + 64))
 
         return "".join(letters)
 
@@ -23,5 +21,3 @@ class Solution:
         if num < 27:
             return True
         return False
-
-
