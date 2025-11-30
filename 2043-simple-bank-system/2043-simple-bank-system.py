@@ -26,8 +26,10 @@ class Bank:
         return True
 
     def withdraw(self, account: int, money: int) -> bool:
-        if not (1 <= account <= len(self.balance)) or \
-            self.balance[account-1] - money < 0:
+        if not (1 <= account <= len(self.balance)):
+            return False
+    
+        if self.balance[account-1] - money < 0:
             return False
 
         self.balance[account-1] -= money
