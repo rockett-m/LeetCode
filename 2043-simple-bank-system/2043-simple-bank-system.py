@@ -8,6 +8,7 @@ class Bank:
         # Lack of coverage - an the account number can be the same for account1 and account2
         # if not (1 <= min(a1, a2) and max(a1, a2) <= len(self.balance) and a1 != a2):
         if not (1 <= min(a1, a2) and max(a1, a2) <= len(self.balance)):
+            del a1, a2
             return False
 
         if self.balance[account1-1] - money < 0:
